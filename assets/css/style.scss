@@ -468,6 +468,78 @@ section {
 /* ============================================
    TIMELINE - Expérience
    ============================================ */
+.mindmap-container {
+  background: var(--surface);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(100, 255, 218, 0.1);
+  transition: var(--transition);
+}
+
+.mindmap-container:hover {
+  border-color: var(--secondary);
+  box-shadow: var(--shadow-hover);
+}
+
+.mindmap-image {
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: var(--transition);
+  display: block;
+}
+
+.mindmap-image:hover {
+  transform: scale(1.02);
+  box-shadow: 0 15px 40px rgba(100, 255, 218, 0.2);
+}
+
+.mindmap-image.fullscreen {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 95vw;
+  height: 95vh;
+  max-width: none;
+  max-height: none;
+  object-fit: contain;
+  z-index: 10000;
+  background: rgba(10, 25, 47, 0.98);
+  padding: 2rem;
+  border-radius: 0;
+  cursor: zoom-out;
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.9);
+}
+
+.mindmap-image.fullscreen::before {
+  content: '✕ Cliquez pour fermer';
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: var(--text-primary);
+  font-size: 1.2rem;
+  background: var(--surface);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-family: var(--font-body);
+  z-index: 10001;
+}
+
+/* Overlay pour l'image en plein écran */
+.mindmap-image.fullscreen::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(10, 25, 47, 0.95);
+  z-index: -1;
+}
+
 .timeline {
   position: relative;
   padding-left: 3rem;

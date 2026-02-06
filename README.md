@@ -169,4 +169,4 @@ Pour toute question, n'hésitez pas à me contacter !
 
 ---
 
-**Fait avec ❤️ en utilisant Jekyll et GitHub Pages**
+**Fait en utilisant Jekyll et GitHub Pages**
