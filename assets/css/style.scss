@@ -338,6 +338,17 @@ section {
   border-color: var(--secondary);
 }
 
+/* Highlight for featured/detailed projects */
+.project-card:nth-child(3) {
+  border: 2px solid rgba(100, 255, 218, 0.2);
+  background: linear-gradient(135deg, rgba(17, 34, 64, 0.8) 0%, rgba(10, 25, 47, 0.9) 100%);
+}
+
+.project-card:nth-child(3)::before {
+  height: 5px;
+  background: var(--gradient-2);
+}
+
 .project-icon {
   font-size: 2.5rem;
   margin-bottom: 1rem;
