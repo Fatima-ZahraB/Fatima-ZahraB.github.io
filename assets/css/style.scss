@@ -683,6 +683,67 @@ section {
 }
 
 /* ============================================
+   BUSINESS / IMPACT MÉTIER
+   ============================================ */
+#business {
+  margin-top: var(--spacing-lg);
+}
+
+#business .section-header {
+  margin-bottom: var(--spacing-lg);
+}
+
+/* Cible le conteneur grid inline */
+#business > div:last-child {
+  margin-top: var(--spacing-md);
+  align-items: stretch;
+}
+
+/* Cible les cartes business */
+#business > div:last-child > div {
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  height: 100%;
+}
+
+#business > div:last-child > div:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Titres des cartes */
+#business h3 {
+  font-family: var(--font-heading);
+  line-height: 1.4;
+}
+
+/* Paragraphes des cartes */
+#business p {
+  line-height: 1.7;
+  font-size: 0.98rem;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #business > div:last-child {
+    gap: 1.25rem !important;
+  }
+
+  #business > div:last-child > div {
+    padding: 1.5rem !important;
+  }
+
+  #business h3 {
+    font-size: 1.15rem !important;
+  }
+
+  #business p {
+    font-size: 0.95rem;
+  }
+}
+
+/* ============================================
    FOOTER
    ============================================ */
 .site-footer {
@@ -814,3 +875,4 @@ section {
   opacity: 0;
   animation: fadeIn 0.8s ease-out forwards;
 }
+
