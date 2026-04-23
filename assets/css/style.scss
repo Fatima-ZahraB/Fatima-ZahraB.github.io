@@ -280,22 +280,19 @@ section {
   font-size: clamp(2rem, 5vw, 3rem);
   color: var(--text-primary);
   font-weight: 700;
-  position: relative;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
 
 .section-title::after {
   content: '';
-  display: block;
-  width: 120px;
+  flex: 1;
   height: 2px;
   background: var(--surface-light);
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  top: auto;
-  margin-left: 0;
 }
+
+
 /* ============================================
    CARDS - Projets
    ============================================ */
