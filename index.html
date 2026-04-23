@@ -92,12 +92,25 @@ layout: default
     <div class="project-card">
       <span class="project-icon">💳</span>
       <h3>Scoring Crédit & API de décision bancaire</h3>
-      <p>
-        Développement d’un système de scoring crédit pour estimer la probabilité de défaut d’un client bancaire à partir de données socio-économiques et financières. 
-        Pipeline ML complet de prédiction avec LightGBM, optimisation via Optuna, interprétabilité avec SHAP, suivi des expérimentations avec MLflow et monitoring du drift avec Evidently.
-        Le projet inclut une API FastAPI, une interface utilisateur Streamlit, des tests automatisés, une conteneurisation Docker et un déploiement via CI/CD GitHub Actions.
-      </p>
-      <div class="project-metric">ROC AUC 0.7864 · 5-fold OOF</div>
+      <ul class="project-list">
+        <li>Système de scoring crédit pour estimer la probabilité de défaut à partir de données socio-économiques et financières</li>
+        <li>Pipeline ML complet avec <strong>LightGBM</strong> et optimisation via <strong>Optuna</strong></li>
+        <li>Interprétabilité avec <strong>SHAP</strong>, suivi des expérimentations avec <strong>MLflow</strong></li>
+        <li>Monitoring du drift avec <strong>Evidently</strong></li>
+        <li>API <strong>FastAPI</strong>, interface <strong>Streamlit</strong>, tests automatisés, Docker et CI/CD GitHub Actions</li>
+      </ul>
+
+      <div class="project-metrics">
+        <div class="project-metric">
+          <span class="metric-label">Performance :</span>
+          <span class="metric-value">ROC AUC 0.7864</span>
+        </div>
+        <div class="project-metric">
+          <span class="metric-label">Validation :</span>
+          <span class="metric-value">5-fold OOF</span>
+        </div>
+      </div>
+      
       <div class="tech-stack">
         <span class="tech-tag">LightGBM</span>
         <span class="tech-tag">FastAPI</span>
@@ -108,21 +121,40 @@ layout: default
         <span class="tech-tag">Streamlit</span>
         <span class="tech-tag">Docker</span>
       </div>
+      
       <a href="https://github.com/Fatima-ZahraB/Scoring-Credit" class="project-link" target="_blank">
         Voir le projet →
       </a>
     </div>
+    
 
     <!-- CROP YIELD PREDICTION (12) -->
     <div class="project-card">
       <span class="project-icon">🌾</span>
       <h3>Prédiction de Rendement Agricole & Recommandation</h3>
-      <p>
-        Conception d’un système de prédiction de rendement agricole et de recommandation de cultures rentables à partir de données climatiques et agronomiques.
-        Le projet combine modélisation avec HistGradientBoostingRegressor optimisé avec RandomizedSearchCV, API FastAPI, tracking MLflow, interface utilisateur Streamlit, tests automatisés et conteneurisation Docker.
-        L’application permet de simuler l’impact de variables agronomiques et d’orienter la décision en fonction du rendement et de la rentabilité attendus.
-      </p>
-      <div class="project-metric">R² 95.76% · MAE 1.07 t/ha · RMSE 1.9 t/ha · Overfitting 3.7%</div>
+      <ul class="project-list">
+        <li>Système de prédiction de rendement agricole et recommandation de cultures rentables</li>
+        <li>Utilisation de données climatiques et agronomiques</li>
+        <li>Modélisation avec <strong>HistGradientBoostingRegressor</strong> optimisé par <strong>RandomizedSearchCV</strong></li>
+        <li>API <strong>FastAPI</strong>, tracking <strong>MLflow</strong>, interface <strong>Streamlit</strong>, tests automatisés et Docker</li>
+        <li>Simulation de l’impact des variables agronomiques pour aider la décision</li>
+      </ul>
+
+      <div class="project-metrics">
+        <div class="project-metric">
+          <span class="metric-value">R² 95.76%</span>
+        </div>
+        <div class="project-metric">
+          <span class="metric-value">MAE 1.07 t/ha</span>
+        </div>
+        <div class="project-metric">
+          <span class="metric-value">RMSE 1.9 t/ha</span>
+        </div>
+        <div class="project-metric">
+          <span class="metric-value">Overfitting 3.7%</span>
+        </div>
+      </div>
+      
       <div class="tech-stack">
         <span class="tech-tag">Recommandation</span>
         <span class="tech-tag">HGBRegressor</span>
@@ -142,14 +174,29 @@ layout: default
     <div class="project-card">
       <span class="project-icon">🏀</span>
       <h3>Assistant analytique RAG pour l’analyse de performance sportive</h3>
-      <p> 
-        Conception d’un assistant intelligent combinant Retrieval-Augmented Generation (RAG) et interrogation SQL pour analyser les performances NBA et contextualiser les statistiques.
-        Architecture hybride de type routing intelligent (RAG / SQL / HYBRID) permettant d’adapter dynamiquement la stratégie de réponse selon la requête utilisateur.
-        Le système s’appuie sur PostgreSQL, FAISS, Mistral, LangChain, Pydantic et une évaluation via RAGAS pour améliorer la fiabilité des réponses et réduire les hallucinations.
-        Le projet met en évidence les limites d’une architecture RAG classique et les gains apportés par un routing intelligent.
-      </p>
-      <div class="project-metric">Faithfulness : 1.00 (SQL) · 0.98 (RAG) · 0.79 (Hybrid)</div>
-      <div class="project-metric">Context Recall : jusqu’à 0.76 (Hybrid)</div>
+      <ul class="project-list">
+        <li>Assistant intelligent combinant <strong>RAG</strong> et interrogation <strong>SQL</strong> pour l’analyse NBA</li>
+        <li>Architecture hybride avec routing intelligent : <strong>RAG / SQL / HYBRID</strong></li>
+        <li>Adaptation dynamique de la stratégie de réponse selon la requête utilisateur</li>
+        <li>Stack : <strong>PostgreSQL</strong>, <strong>FAISS</strong>, <strong>Mistral</strong>, <strong>LangChain</strong>, <strong>Pydantic</strong></li>
+        <li>Évaluation avec <strong>RAGAS</strong> pour améliorer la fiabilité et réduire les hallucinations</li>
+      </ul>
+
+      <div class="project-metrics">
+        <div class="project-metric">
+          <span class="metric-label">Faithfulness :</span>
+          <span class="metric-value">1.00 (SQL)</span>
+          <span class="metric-separator">·</span>
+          <span class="metric-value">0.98 (RAG)</span>
+          <span class="metric-separator">·</span>
+          <span class="metric-value">0.79 (Hybrid)</span>
+        </div>
+        <div class="project-metric">
+          <span class="metric-label">Context Recall :</span>
+          <span class="metric-value">jusqu’à 0.76 (Hybrid)</span>
+        </div>
+      </div>
+      
       <div class="tech-stack">
         <span class="tech-tag">RAG</span>
         <span class="tech-tag">LLM</span>
@@ -170,14 +217,26 @@ layout: default
     <div class="project-card">
       <span class="project-icon">🧠</span>
       <h3>Détection de tumeurs cérébrales sur IRM</h3>
-      <p>
-        Projet de deep learning appliqué au computer vision pour l’imagerie médicale, visant la détection de tumeurs cérébrales à partir d’IRM dans un contexte de données fortement déséquilibrées et partiellement labellisées. 
-        Comparaison d’approches supervisée, non supervisée et semi-supervisée avec extraction de features via ResNet50, clustering et CNN custom.
-        Les résultats montrent l’intérêt de l’exploitation des données non annotées, avec une amélioration nette des performances par rapport au supervisé pur.
-      </p>
+      <ul class="project-list">
+        <li>Projet de deep learning appliqué au computer vision pour l’imagerie médicale</li>
+        <li>Détection de tumeurs cérébrales à partir d’IRM dans un contexte de données déséquilibrées et partiellement labellisées</li>
+        <li>Comparaison d’approches supervisée, non supervisée et semi-supervisée</li>
+        <li>Extraction de features via <strong>ResNet50</strong>, clustering et <strong>CNN</strong> custom</li>
+        <li>Mise en évidence de l’intérêt des données non annotées pour améliorer les performances</li>
+      </ul>
 
-        <div class="project-metric">AUC 0.944 (semi-supervisé) · vs 0.820 (supervisé pur)</div>
-        <div class="project-metric">Amélioration significative grâce à l’exploitation des données non labellisées</div>
+      <div class="project-metrics">
+        <div class="project-metric">
+          <span class="metric-value">AUC 0.944 (semi-supervisé)</span>
+          <span class="metric-separator">vs</span>
+          <span class="metric-value">0.820 (supervisé pur)</span>
+        </div>
+        <div class="project-metric">
+          <span class="metric-label">Résultat clé :</span>
+          <span class="metric-value">amélioration significative grâce aux données non labellisées</span>
+        </div>
+      </div>
+      
         <div class="tech-stack">
           <span class="tech-tag">PyTorch</span>
         <span class="tech-tag">ResNet50</span>
@@ -198,12 +257,22 @@ layout: default
     <div class="project-card">
       <span class="project-icon">🎭</span>
       <h3>Chatbot RAG pour la recommandation d’événements culturels</h3>
-       <p>
-        Développement d’un assistant conversationnel basé sur une architecture RAG pour recommander des événements culturels à Paris à partir de données OpenAgenda.
-        Le système combine embeddings, indexation vectorielle avec FAISS, génération avec Mistral Large, orchestration via LangChain, API FastAPI et déploiement Docker avec CI/CD.
-        Évaluation via RAGAS pour mesurer la qualité et la fidélité des réponses générées.
-      </p>
-      <div class="project-metric">Faithfulness 0.90 · Context Recall 0.62</div>
+      <ul class="project-list">
+        <li>Assistant conversationnel basé sur une architecture <strong>RAG</strong> pour recommander des événements culturels à Paris</li>
+        <li>Exploitation de données <strong>OpenAgenda</strong></li>
+        <li>Embeddings, indexation vectorielle avec <strong>FAISS</strong> et génération avec <strong>Mistral Large</strong></li>
+        <li>Orchestration via <strong>LangChain</strong>, API <strong>FastAPI</strong> et déploiement Docker avec CI/CD</li>
+        <li>Évaluation via <strong>RAGAS</strong> pour mesurer qualité et fidélité des réponses</li>
+      </ul>
+
+      <div class="project-metrics">
+        <div class="project-metric">
+          <span class="metric-value">Faithfulness 0.90</span>
+          <span class="metric-separator">·</span>
+          <span class="metric-value">Context Recall 0.62</span>
+        </div>
+      </div>
+       
       <div class="tech-stack">
         <span class="tech-tag">RAG</span>
         <span class="tech-tag">LangChain</span>
