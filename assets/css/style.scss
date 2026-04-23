@@ -292,7 +292,6 @@ section {
   background: var(--surface-light);
 }
 
-
 /* ============================================
    CARDS - Projets
    ============================================ */
@@ -301,6 +300,7 @@ section {
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 2rem;
   margin-top: var(--spacing-md);
+  align-items: stretch;
 }
 
 .project-card {
@@ -311,6 +311,10 @@ section {
   border: 1px solid rgba(100, 255, 218, 0.1);
   position: relative;
   overflow: hidden;
+  box-shadow: var(--shadow);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-card::before {
@@ -359,12 +363,77 @@ section {
   margin-bottom: 1rem;
   font-family: var(--font-heading);
   font-weight: 600;
+  line-height: 1.3;
 }
 
-.project-card p {
+/* Liste projet */
+.project-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+
+.project-list li {
   color: var(--text-secondary);
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.8rem;
+  padding-left: 1.4rem;
+  position: relative;
   line-height: 1.6;
+  font-size: 0.98rem;
+}
+
+.project-list li:last-child {
+  margin-bottom: 0;
+}
+
+.project-list li::before {
+  content: '▹';
+  color: var(--secondary);
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: 700;
+}
+
+/* Valeurs importantes dans les bullets */
+.project-list strong {
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+/* Bloc métriques */
+.project-metrics {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin-bottom: 1.5rem;
+}
+
+.project-metric {
+  background: rgba(100, 255, 218, 0.08);
+  border: 1px solid rgba(100, 255, 218, 0.14);
+  border-left: 3px solid var(--secondary);
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.metric-label {
+  color: var(--text-secondary);
+  font-weight: 500;
+  margin-right: 0.35rem;
+}
+
+.metric-value {
+  color: var(--secondary);
+  font-weight: 700;
+}
+
+.metric-separator {
+  color: var(--text-secondary);
+  margin: 0 0.35rem;
+  font-weight: 500;
 }
 
 .tech-stack {
@@ -372,6 +441,7 @@ section {
   flex-wrap: wrap;
   gap: 0.5rem;
   margin-bottom: 1.5rem;
+  margin-top: auto;
 }
 
 .tech-tag {
